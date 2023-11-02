@@ -1,0 +1,56 @@
+const userData = {
+    name: "Karl",
+    fullname: "Karl Fredriech Getuya",
+    degree: "Bachelor of Science in Information Technology",
+    profile: "/public/avatar.jpg",
+    email: "karlfredriechgetuya@gmail.com",
+    address: "Iloilo, Iloilo City Philippines",
+    title: "Web Developer",
+    socials: {
+        facebook: "https://www.facebook.com/KarlFredriech",
+        instagram: "https://www.instagram.com/its_krl.frdrch/",
+        linkedin:
+            "https://www.linkedin.com/in/karl-fredriech-getuya-6b0271218/",
+        github: "https://github.com/Krfd",
+    },
+    stack: {
+        frontend: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind CSS",
+            "JavaScript",
+            "ReactJS",
+        ],
+        backend: ["PHP", "SQL", "Firebase"],
+        tools: ["Git", "GitHub", "VS Code", "Postman", "CLI"],
+    },
+    blogs: {
+        blog1: {
+            title: "Tips on How to Increase Productivity when Building a Website",
+            date: "August 22, 2023",
+            link: "https://medium.com/@karlfredriechgetuya/tips-on-how-to-build-your-website-faster-d61187db38bd?source=user_profile---------1----------------------------",
+        },
+        blog2: {
+            title: "Useful Animation Libraries and Tools You Can Include in Developing a Website",
+            date: "September 20, 2023",
+            link: "https://medium.com/@karlfredriechgetuya/useful-animation-libraries-and-tools-you-can-include-in-developing-a-website-1afd99f725b9?source=user_profile---------0----------------------------",
+        },
+    },
+    projects: {
+        project1: {
+            title: "Wikipedia Clone",
+            link: "https://wikipedia-responsive-website-redesign.vercel.app/",
+        },
+        project2: {
+            title: "JavaScript Game",
+            link: "https://mini-games-iota.vercel.app/",
+        },
+        project3: {
+            title: "API-Driven Website",
+            link: "https://api-driven-website-p683.vercel.app/",
+        },
+    },
+};
+
+export default userData;
