@@ -9,7 +9,9 @@ function Contact() {
                     method="post"
                     className="my-5 px-3 px-md-5 form"
                 >
-                    <h1 className="fw-bold title text-md-start">Contact</h1>
+                    <h1 className="fw-bold title text-md-start dark">
+                        Contact
+                    </h1>
                     <div className="mt-5">
                         <label htmlFor="name">Name</label>
                         <input

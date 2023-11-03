@@ -19,12 +19,12 @@ function Blogs() {
                     <h6 className="fw-bold mt-3">
                         {userData.blogs.blog1.title}
                     </h6>
-                    <small className="text-sm text-secondary">
+                    <small className="text-sm secondary">
                         Publish on {userData.blogs.blog1.date}
                     </small>
                     <a
                         href={userData.blogs.blog1.link}
-                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg
@@ -51,12 +51,12 @@ function Blogs() {
                     <h6 className="fw-bold mt-3">
                         {userData.blogs.blog2.title}
                     </h6>
-                    <small className="text-sm text-secondary">
+                    <small className="text-sm secondary">
                         Publish on {userData.blogs.blog2.date}
                     </small>
                     <a
                         href={userData.blogs.blog1.link}
-                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg
@@ -83,12 +83,12 @@ function Blogs() {
                     <h6 className="fw-bold mt-3">
                         {userData.blogs.blog2.title}
                     </h6>
-                    <small className="text-sm text-secondary">
+                    <small className="text-sm secondary">
                         Publish on {userData.blogs.blog2.date}
                     </small>
                     <a
                         href={userData.blogs.blog1.link}
-                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg

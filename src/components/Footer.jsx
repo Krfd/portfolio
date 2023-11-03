@@ -11,25 +11,25 @@ function Footer() {
                 <div className="socials d-flex justify-content-center align-items-center gap-3">
                     <a
                         href={userData.socials.facebook}
-                        className="text-secondary social-icon"
+                        className="secondary social-icon"
                     >
                         <i className="fa-brands fa-facebook"></i>
                     </a>
                     <a
                         href={userData.socials.instagram}
-                        className="text-secondary social-icon"
+                        className="secondary social-icon"
                     >
                         <i className="fa-brands fa-instagram"></i>
                     </a>
                     <a
                         href={userData.socials.linkedin}
-                        className="text-secondary social-icon"
+                        className="secondary social-icon"
                     >
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
                     <a
                         href={userData.socials.github}
-                        className="text-secondary social-icon"
+                        className="secondary social-icon"
                     >
                         <i className="fa-brands fa-github"></i>
                     </a>

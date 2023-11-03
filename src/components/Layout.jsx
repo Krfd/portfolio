@@ -4,6 +4,18 @@ import { Outlet, Link } from "react-router-dom";
 import userData from "../data/user";
 
 function Layout() {
+    const setDarkMode = () => {
+        document.querySelector("body").setAttribute("data-theme", "dark");
+    };
+    const setLightMode = () => {
+        document.querySelector("body").setAttribute("data-theme", "light");
+    };
+
+    const toggleTheme = (e) => {
+        if (e.target.check) setDarkMode();
+        else setLightMode();
+    };
+
     return (
         <>
             <main className="container mt-3 mt-md-5 pt-3 pt-md-5">
@@ -11,7 +23,7 @@ function Layout() {
                     <div className="container d-flex justify-content-between align-items-end align-items-md-center">
                         <Link className="navbar-brand fw-bold" to="/">
                             <h4 className="fw-bold">{userData.name}</h4>
-                            <p className="text-secondary fw-light">
+                            <p className="secondary fw-light">
                                 {userData.title}
                             </p>
                         </Link>
@@ -49,32 +61,32 @@ function Layout() {
                     <div className="ms-2 d-flex gap-3 justify-content-start justify-content-md-end align-items-center">
                         <a
                             href={userData.socials.facebook}
-                            className="text-secondary social-icon"
+                            className="secondary social-icon"
                         >
                             <i className="fa-brands fa-facebook"></i>
                         </a>
                         <a
                             href={userData.socials.instagram}
-                            className="text-secondary social-icon"
+                            className="secondary social-icon"
                         >
                             <i className="fa-brands fa-instagram"></i>
                         </a>
                         <a
                             href={userData.socials.linkedin}
-                            className="text-secondary social-icon"
+                            className="secondary social-icon"
                         >
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
                         <a
                             href={userData.socials.github}
-                            className="text-secondary social-icon"
+                            className="secondary social-icon"
                         >
                             <i className="fa-brands fa-github"></i>
                         </a>
                         <a href="" className="social-icon ">
                             <i
                                 className="fa-solid fa-moon text-warning"
-                                id="mode"
+                                onChange={toggleTheme}
                             ></i>
                         </a>
                     </div>

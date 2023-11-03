@@ -18,9 +18,7 @@ function Home() {
                     <div className="mt-5 mt-md-0 text-center text-md-start">
                         <h1 className="fw-light text-md-start fw-bold">
                             Karl{" "}
-                            <span className="fw-bold text-secondary">
-                                Fredriech
-                            </span>{" "}
+                            <span className="fw-bold secondary">Fredriech</span>{" "}
                             Getuya
                         </h1>
                         <h5>
