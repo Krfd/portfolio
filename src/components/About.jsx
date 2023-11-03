@@ -19,7 +19,9 @@ function About() {
     return (
         <>
             <div className="bg-light my-5 py-5">
-                <h1 className="title fw-bold">About</h1>
+                <h1 className="title fw-bold text-center text-md-start ms-md-5">
+                    About
+                </h1>
                 <div className="p-3 p-md-5">
                     <p className="fs-3 dark">
                         <span className="fw-bold">Hi there! </span> I'm{" "}
@@ -36,7 +38,7 @@ function About() {
                         <span className="fw-bold">Figma</span>.
                     </p>
                 </div>
-                <div className="d-flex flex-column-reverse flex-md-row my-0 my-md-5 gap-3 ">
+                <div className="d-flex flex-column-reverse flex-md-row my-0 my-md-3 gap-3 ">
                     <div className="p-3 p-md-5 pe-md-0 pe-lg-5 col-12 col-md-4 ">
                         <h2>Contact</h2>
                         <p className="dark fs-5">
