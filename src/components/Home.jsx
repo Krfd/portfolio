@@ -6,7 +6,7 @@ import RecentProjects from "./home/RecentProjects";
 function Home() {
     return (
         <>
-            <div className="container py-5 my-5">
+            <div className="container py-md-5 my-5">
                 <div className="d-block d-md-flex flex-md-row-reverse justify-content-center align-items-center gap-5 my-5 py-5">
                     <div>
                         <img
@@ -27,7 +27,7 @@ function Home() {
                         </h5>
                     </div>
                 </div>
-                <div className="my-5 py-5 d-flex flex-column gap-5">
+                <div className="my-5 py-md-5 d-flex flex-column gap-5">
                     <RecentProjects />
                     <Blogs />
                 </div>

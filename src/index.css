@@ -57,7 +57,11 @@
     margin-left: 5px;
     transition: all ease 0.8s;
 }
-
+/* ABOUT */
+.technology {
+    height: auto;
+    width: 50px;
+}
 /* CONTACT */
 .form {
     width: 50%;
