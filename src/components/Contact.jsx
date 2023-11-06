@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import { db } from "../config/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState();
+
+    const database = collection(db, "employee");
+
+    const submit = async () => {
+        await addDoc(database, {
+            name: name,
+            email: email,
+            phone: phone,
+        });
+    };
+
+    // Swal.fire({
+    //     icon: "error",
+    //     title: "Oops...",
+    //     text: "Please fill up all the fields!",
+    // });
+    // Swal.fire({
+    //     icon: "success",
+    //     title: "Success!",
+    //     text: "Your message has been sent!",
+    // });
+
     return (
         <>
             <div className="py-3 my-5 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5">
@@ -17,9 +44,7 @@ function Contact() {
                         <input
                             type="text"
                             className="form-control"
-                            name="name"
-                            id="name"
-                            required
+                            onChange={(e) => setName(e.target.value)}
                         />
                         <label htmlFor="email" className="mt-2">
                             Email
@@ -27,9 +52,7 @@ function Contact() {
                         <input
                             type="text"
                             className="form-control"
-                            name="email"
-                            id="email"
-                            required
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <label htmlFor="phone" className="mt-2">
                             Phone Number
@@ -37,11 +60,12 @@ function Contact() {
                         <input
                             type="tel"
                             className="form-control"
-                            phone="phone"
-                            id="phone"
-                            required
+                            onChange={(e) => setPhone(e.target.value)}
                         />
-                        <button className="text-center w-100 btn btn-dark mt-2">
+                        <button
+                            className="text-center w-100 btn btn-dark mt-2"
+                            onClick={submit}
+                        >
                             Submit
                         </button>
                     </div>

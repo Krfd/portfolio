@@ -1,13 +1,10 @@
 import React from "react";
-import api1 from "/public/api1.png";
-import api2 from "/public/api2.png";
-import api3 from "/public/api3.png";
-import game1 from "/public/game1.png";
-import game2 from "/public/game2.png";
-import wikipedia1 from "/public/wikipedia1.png";
-import wikipedia2 from "/public/wikipedia2.png";
-import wikipedia3 from "/public/wikipedia3.png";
-import wikipedia_desktop from "/public/Wikipedia-Desktop.png";
+import api1 from "../assets/api1.png";
+import api3 from "../assets/api3.png";
+import game1 from "../assets/game1.png";
+import game2 from "../assets/game2.png";
+import wikipedia1 from "../assets/wikipedia1.png";
+import wikipedia2 from "../assets/wikipedia2.png";
 import userData from "./../data/user";
 
 function Projects() {
