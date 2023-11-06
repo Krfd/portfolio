@@ -17,17 +17,6 @@ function Contact() {
         });
     };
 
-    // Swal.fire({
-    //     icon: "error",
-    //     title: "Oops...",
-    //     text: "Please fill up all the fields!",
-    // });
-    // Swal.fire({
-    //     icon: "success",
-    //     title: "Success!",
-    //     text: "Your message has been sent!",
-    // });
-
     return (
         <>
             <div className="py-3 my-5 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5">
