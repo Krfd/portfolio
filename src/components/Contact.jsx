@@ -50,7 +50,7 @@ function Contact() {
                             Email
                         </label>
                         <input
-                            type="text"
+                            type="email"
                             className="form-control"
                             onChange={(e) => setEmail(e.target.value)}
                         />
