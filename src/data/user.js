@@ -36,6 +36,11 @@ const userData = {
             date: "September 20, 2023",
             link: "https://medium.com/@karlfredriechgetuya/useful-animation-libraries-and-tools-you-can-include-in-developing-a-website-1afd99f725b9?source=user_profile---------0----------------------------",
         },
+        blog3: {
+            title: "Figma Plugins to Help You Become a Better UX Designer",
+            date: "November 5, 2023",
+            link: "https://medium.com/p/e5641d94ad02/edit?source=post_page-----e5641d94ad02--------------------------------",
+        },
     },
     projects: {
         project1: {

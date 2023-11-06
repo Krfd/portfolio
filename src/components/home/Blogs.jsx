@@ -2,6 +2,7 @@ import React from "react";
 import userData from "../../data/user";
 import BlogImg1 from "/images/blog1.jpg";
 import BlogImg2 from "/images/blog2.jpg";
+import BlogImg3 from "/images/blog3.jpg";
 
 function Blogs() {
     return (
@@ -45,7 +46,7 @@ function Blogs() {
                 <div className="card shadow col-12 col-md-5 col-lg-4 p-3 border-0 rounded-0">
                     <img
                         src={BlogImg2}
-                        alt={userData.title}
+                        alt={userData.blogs.blog2.title}
                         className="blog-img object-fit-cover rounded-3"
                     />
                     <h6 className="fw-bold mt-3">
@@ -55,7 +56,7 @@ function Blogs() {
                         Publish on {userData.blogs.blog2.date}
                     </small>
                     <a
-                        href={userData.blogs.blog1.link}
+                        href={userData.blogs.blog2.link}
                         className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
@@ -76,18 +77,18 @@ function Blogs() {
                 </div>
                 <div className="card shadow col-12 col-md-5 col-lg-4 p-3 border-0 rounded-0">
                     <img
-                        src={BlogImg2}
-                        alt={userData.title}
+                        src={BlogImg3}
+                        alt={userData.blogs.blog3.title}
                         className="blog-img object-fit-cover rounded-3"
                     />
                     <h6 className="fw-bold mt-3">
-                        {userData.blogs.blog2.title}
+                        {userData.blogs.blog3.title}
                     </h6>
                     <small className="text-sm secondary">
-                        Publish on {userData.blogs.blog2.date}
+                        Publish on {userData.blogs.blog3.date}
                     </small>
                     <a
-                        href={userData.blogs.blog1.link}
+                        href={userData.blogs.blog3.link}
                         className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
