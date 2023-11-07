@@ -44,15 +44,15 @@ const userData = {
     },
     projects: {
         project1: {
-            title: "Wikipedia Clone",
+            title: "Wikipedia Redesign",
             link: "https://wikipedia-responsive-website-redesign.vercel.app/",
         },
         project2: {
-            title: "JavaScript Game",
+            title: "Number Guessing Game",
             link: "https://mini-games-iota.vercel.app/",
         },
         project3: {
-            title: "API-Driven Website",
+            title: "REST Countries API",
             link: "https://api-driven-website-p683.vercel.app/",
         },
     },

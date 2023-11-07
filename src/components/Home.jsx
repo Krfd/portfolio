@@ -16,12 +16,12 @@ function Home() {
                         />
                     </div>
                     <div className="mt-5 mt-md-0 text-center text-md-start">
-                        <h1 className="fw-light text-md-start fw-bold">
+                        <h1 className="fw-light text-md-start fw-bold dark">
                             Karl{" "}
                             <span className="fw-bold secondary">Fredriech</span>{" "}
                             Getuya
                         </h1>
-                        <h5>
+                        <h5 className="dark">
                             A 23-year-old Aspiring
                             <span className="fw-bold"> Web Developer</span>
                         </h5>

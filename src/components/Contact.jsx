@@ -1,25 +1,9 @@
-import React, { useState } from "react";
-import { db } from "../config/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import "./modeIcon.css";
 
 function Contact() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState();
-
-    const database = collection(db, "employee");
-
-    const submit = async () => {
-        await addDoc(database, {
-            name: name,
-            email: email,
-            phone: phone,
-        });
-    };
-
     return (
         <>
-            <div className="py-3 my-5 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5">
+            <div className="py-3 my-5 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5 dark">
                 <form
                     action=""
                     method="post"
@@ -51,10 +35,7 @@ function Contact() {
                             className="form-control"
                             onChange={(e) => setPhone(e.target.value)}
                         />
-                        <button
-                            className="text-center w-100 btn btn-dark mt-2"
-                            onClick={submit}
-                        >
+                        <button className="text-center w-100 btn btn-dark mt-2">
                             Submit
                         </button>
                     </div>
@@ -64,7 +45,7 @@ function Contact() {
                         Feel free to send me an {""}
                         <a
                             href="mailto:karlfredriechgetuya@gmail.com"
-                            className="text-underline text-dark fw-bold"
+                            className="text-underline dark fw-bold"
                         >
                             Email
                         </a>

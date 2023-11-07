@@ -7,7 +7,7 @@ import BlogImg3 from "/images/blog3.jpg";
 function Blogs() {
     return (
         <>
-            <h2 className="fw-bold title text-center text-lg-start">
+            <h2 className="fw-bold title text-center text-lg-start dark">
                 Blog Posts
             </h2>
             <div className="container d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap gap-5 gap-lg-3 my-5 mx-auto justify-content-center align-items-center">

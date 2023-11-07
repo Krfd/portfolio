@@ -12,11 +12,11 @@ function RecentProjects() {
     return (
         <>
             <div className="mt-5">
-                <h2 className="title fw-bold text-center text-lg-start">
+                <h2 className="title fw-bold text-center text-lg-start dark">
                     Recent Projects
                 </h2>
-                <div className="d-block d-md-flex gap-5 my-5 ">
-                    <div className="p-5 project-container align-self-md-center">
+                <div className="d-block d-md-flex gap-5 my-5">
+                    <div className="p-5 project-container">
                         <h4 className="dark fw-bold p-3 rounded-3">
                             {userData.projects.project1.title}
                         </h4>

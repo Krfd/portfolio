@@ -18,8 +18,8 @@ import postman from "./../icons/postman.png";
 function About() {
     return (
         <>
-            <div className="bg-light my-5 py-5">
-                <h1 className="title fw-bold text-center text-md-start ms-md-5">
+            <div className="background-light my-5 py-5">
+                <h1 className="title fw-bold text-center text-md-start ms-md-5 dark">
                     About
                 </h1>
                 <div className="p-3 p-md-5">
@@ -40,13 +40,13 @@ function About() {
                 </div>
                 <div className="d-flex flex-column-reverse flex-md-row my-0 my-md-3 gap-3 ">
                     <div className="p-3 p-md-5 pe-md-0 pe-lg-5 col-12 col-md-4 ">
-                        <h2>Contact</h2>
+                        <h2 className="dark">Contact</h2>
                         <p className="dark fs-5">
                             For more information, you can contact me through{" "}
                             {""}
                             <a
                                 href="mailto:karlfredriechgetuya@gmail.com"
-                                className="text-dark fw-bold"
+                                className="dark fw-bold"
                                 style={{ textDecoration: "underline" }}
                             >
                                 Email
@@ -55,14 +55,16 @@ function About() {
                             available.
                         </p>
                         <div className="mt-5">
-                            <h2>I'm also accepting freelance job!</h2>
+                            <h2 className="dark">
+                                I'm also accepting freelance job!
+                            </h2>
                             <p className="dark fs-5">
                                 You can check my projects and activities for
                                 more references.
                             </p>
                         </div>
                         <div className="mt-5">
-                            <h2>Social Links</h2>
+                            <h2 className="dark">Social Links</h2>
                             <ul className="list-unstyled">
                                 <li className="nav-item d-flex align-items-center mt-3">
                                     <a
@@ -151,7 +153,7 @@ function About() {
                             </ul>
                         </div>
                     </div>
-                    <div className="p-3 p-md-5 col-12 col-md-8">
+                    <div className="p-3 p-md-5 col-12 col-md-8 dark">
                         <p className="fs-5">
                             As a beginner, I'm still learning and exploring new
                             things. I'm also open to any suggestions and
@@ -162,104 +164,104 @@ function About() {
                             technologies.
                         </p>
                         <button
-                            className="bg-dark light text-center py-2 px-3 rounded-3 border-0 fw-bold mt-5"
+                            className="button-background light py-2 px-3 rounded-3 border-0 fw-bold mt-5"
                             style={{ cursor: "default" }}
                         >
                             My Stack and Tools
                         </button>
                         <div className="d-flex flex-wrap text-center gap-3 mt-5">
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={html}
                                     alt="HTML"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={css}
                                     alt="CSS"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={bootstrap}
                                     alt="Bootstrap"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={tailwind}
                                     alt="Tailwind"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={js}
                                     alt="Javascript"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={react}
                                     alt="React"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={php}
                                     alt="PHP"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={sql}
                                     alt="SQL"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={vscode}
                                     alt="VS Code"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={git}
                                     alt="Git"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={firebase}
                                     alt="Firebase"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={postman}
                                     alt="Postman"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={xampp}
                                     alt="XAMPP"
                                     className="technology"
                                 />
                             </div>
-                            <div className="shadow-sm p-3 rounded-3">
+                            <div className="shadow-sm p-3 rounded-3 box">
                                 <img
                                     src={github}
                                     alt="Github"

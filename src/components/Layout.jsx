@@ -1,18 +1,25 @@
-import React from "react";
 import Footer from "./Footer";
 import { Outlet, Link } from "react-router-dom";
 import userData from "../data/user";
+import "./modeIcon.css";
 
 function Layout() {
     const setDarkMode = () => {
         document.querySelector("body").setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
     };
     const setLightMode = () => {
         document.querySelector("body").setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
     };
 
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "dark") setDarkMode();
+    else setLightMode();
+
     const toggleTheme = (e) => {
-        if (e.target.check) setDarkMode();
+        if (e.target.checked) setDarkMode();
         else setLightMode();
     };
 
@@ -22,7 +29,7 @@ function Layout() {
                 <div className="container-fluid d-block d-md-flex justify-content-md-between align-items-center">
                     <div className="container d-flex justify-content-between align-items-end align-items-md-center">
                         <Link className="navbar-brand fw-bold" to="/">
-                            <h4 className="fw-bold">{userData.name}</h4>
+                            <h4 className="fw-bold dark">{userData.name}</h4>
                             <p className="secondary fw-light">
                                 {userData.title}
                             </p>
@@ -33,23 +40,23 @@ function Layout() {
                                 id="navbarNav"
                             >
                                 <ul className="navbar-nav">
-                                    <li className="nav-item ">
-                                        <Link to="about" className="nav-link ">
+                                    <li className="nav-item">
+                                        <Link to="/about" className="nav-link">
                                             About
                                         </Link>
                                     </li>
-                                    <li className="nav-item ">
+                                    <li className="nav-item">
                                         <Link
-                                            to="projects"
+                                            to="/projects"
                                             className="nav-link"
                                         >
                                             Projects
                                         </Link>
                                     </li>
-                                    <li className="nav-item ">
+                                    <li className="nav-item">
                                         <Link
-                                            to="contact"
-                                            className="nav-link "
+                                            to="/contact"
+                                            className="nav-link"
                                         >
                                             Contact
                                         </Link>
@@ -83,12 +90,20 @@ function Layout() {
                         >
                             <i className="fa-brands fa-github"></i>
                         </a>
-                        <a href="" className="social-icon ">
-                            <i
-                                className="fa-solid fa-moon text-warning"
+                        <div className="dark_mode">
+                            <input
+                                type="checkbox"
+                                className="dark_mode_input"
+                                id="darkmode-toggle"
                                 onChange={toggleTheme}
-                            ></i>
-                        </a>
+                                defaultChecked={theme === "dark" ? true : false}
+                            />
+
+                            <label
+                                htmlFor="darkmode-toggle"
+                                className="dark_mode_label"
+                            ></label>
+                        </div>
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@ function Footer() {
         <>
             <footer className="container d-flex justify-content-between align-items-center pb-5 pt-3 border-top">
                 <div>
-                    <h4 className="fw-bold">{userData.name}.</h4>
+                    <h4 className="fw-bold dark">{userData.name}.</h4>
                 </div>
                 <div className="socials d-flex justify-content-center align-items-center gap-3">
                     <a

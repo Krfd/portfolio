@@ -10,8 +10,8 @@ import userData from "./../data/user";
 function Projects() {
     return (
         <>
-            <div className="bg-light my-5 py-5">
-                <h1 className="title fw-bold text-center text-md-start ms-md-5">
+            <div className="background-light my-5 py-5">
+                <h1 className="title fw-bold text-center text-md-start ms-md-5 dark">
                     Projects
                 </h1>
                 <div className="d-block d-md-flex justify-content-center flex-wrap my-5 py-3 ">
