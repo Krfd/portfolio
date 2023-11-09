@@ -17,7 +17,7 @@ function RecentProjects() {
                 </h2>
                 <div className="d-block d-md-flex gap-5 my-5">
                     <div className="p-5 project-container">
-                        <h4 className="dark fw-bold p-3 rounded-3">
+                        <h4 className="dark fw-bold p-3 rounded-3 text-center">
                             {userData.projects.project1.title}
                         </h4>
                         <div className="container">
