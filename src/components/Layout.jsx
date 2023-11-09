@@ -61,6 +61,7 @@ function Layout() {
                                             Contact
                                         </Link>
                                     </li>
+                                    <Link to="/db" />
                                 </ul>
                             </div>
                         </nav>
