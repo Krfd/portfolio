@@ -2,33 +2,47 @@ import "./modeIcon.css";
 import app from "./firebaseConfig";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 function Contact() {
-    const [contact, setContact] = useState({ name: "", email: "", age: "" });
+    const [contact, setContact] = useState({ name: "", email: "", phone: "" });
 
-    const addContact = () => {
-        const db = getFirestore(app);
+    const addContact = (e) => {
+        try {
+            e.preventDefault();
+            const db = getFirestore(app);
 
-        // db
-        //     ? alert("Connected to the database")
-        //     : alert("Not connected to the database");
+            // db
+            //     ? alert("Connected to the database")
+            //     : alert("Not connected to the database");
 
-        if (
-            contact.name === "" ||
-            contact.email === "" ||
-            contact.phone === ""
-        ) {
-            alert("Please fill in all the fields");
-        } else {
-            addDoc(collection(db, "contact"), contact);
-            setContact({
-                name: "",
-                email: "",
-                phone: "",
-            });
+            if (
+                contact.name === "" ||
+                contact.email === "" ||
+                contact.phone === ""
+            ) {
+                Swal.fire({
+                    title: "Oops!",
+                    text: "Please fill out all the fields",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                });
+            } else {
+                addDoc(collection(db, "contact"), contact);
+                setContact({
+                    name: "",
+                    email: "",
+                    phone: "",
+                });
+                Swal.fire({
+                    title: "Success!",
+                    text: "Thank you for contacting us! We will get back to you soon",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                });
+            }
+        } catch (err) {
+            console.log(err);
         }
     };
 
@@ -56,6 +70,7 @@ function Contact() {
                             }
                             value={contact.name}
                             id="name"
+                            minLength={6}
                         />
                         <label htmlFor="email" className="mt-2">
                             Email
@@ -71,6 +86,7 @@ function Contact() {
                             }
                             id="email"
                             value={contact.email}
+                            minLength={10}
                         />
                         <label htmlFor="phone" className="mt-2">
                             Phone Number
@@ -81,11 +97,13 @@ function Contact() {
                             onChange={(e) =>
                                 setContact({
                                     ...contact,
-                                    contact: e.target.value,
+                                    phone: e.target.value,
                                 })
                             }
                             id="phone"
                             value={contact.phone}
+                            minLength={11}
+                            maxLength={13}
                         />
                         <button
                             className="text-center w-100 btn btn-dark mt-2"
