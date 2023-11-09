@@ -10,7 +10,7 @@ function Blogs() {
             <h2 className="fw-bold title text-center text-lg-start dark">
                 Blog Posts
             </h2>
-            <div className="container d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap gap-5 gap-lg-3 my-5 mx-auto justify-content-center align-items-center">
+            <div className="container d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap gap-5 gap-lg-3 mx-auto justify-content-center align-items-center">
                 <div className="card shadow col-12 col-md-5 col-lg-4 p-3 border-0 rounded-0">
                     <img
                         src={BlogImg1}
