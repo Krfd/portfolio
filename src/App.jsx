@@ -21,8 +21,8 @@ function App() {
                         <Route path="projects" element={<Projects />} />
                         <Route path="contact" element={<Contact />} />
                     </Route>
-                    <Route path="db" element={<Database />} />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="/db" element={<Database />} />
+                    <Route path="/*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </>
