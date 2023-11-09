@@ -1,6 +1,37 @@
 import "./modeIcon.css";
+import app from "./firebaseConfig";
+import { useState, useEffect } from "react";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 function Contact() {
+    const [contact, setContact] = useState({ name: "", email: "", age: "" });
+
+    const addContact = () => {
+        const db = getFirestore(app);
+
+        // db
+        //     ? alert("Connected to the database")
+        //     : alert("Not connected to the database");
+
+        if (
+            contact.name === "" ||
+            contact.email === "" ||
+            contact.phone === ""
+        ) {
+            alert("Please fill in all the fields");
+        } else {
+            addDoc(collection(db, "contact"), contact);
+            setContact({
+                name: "",
+                email: "",
+                phone: "",
+            });
+        }
+    };
+
     return (
         <>
             <div className="py-3 my-5 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5 dark">
@@ -17,7 +48,14 @@ function Contact() {
                         <input
                             type="text"
                             className="form-control"
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e) =>
+                                setContact({
+                                    ...contact,
+                                    name: e.target.value,
+                                })
+                            }
+                            value={contact.name}
+                            id="name"
                         />
                         <label htmlFor="email" className="mt-2">
                             Email
@@ -25,7 +63,14 @@ function Contact() {
                         <input
                             type="email"
                             className="form-control"
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) =>
+                                setContact({
+                                    ...contact,
+                                    email: e.target.value,
+                                })
+                            }
+                            id="email"
+                            value={contact.email}
                         />
                         <label htmlFor="phone" className="mt-2">
                             Phone Number
@@ -33,9 +78,19 @@ function Contact() {
                         <input
                             type="tel"
                             className="form-control"
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) =>
+                                setContact({
+                                    ...contact,
+                                    contact: e.target.value,
+                                })
+                            }
+                            id="phone"
+                            value={contact.phone}
                         />
-                        <button className="text-center w-100 btn btn-dark mt-2">
+                        <button
+                            className="text-center w-100 btn btn-dark mt-2"
+                            onClick={addContact}
+                        >
                             Submit
                         </button>
                     </div>
