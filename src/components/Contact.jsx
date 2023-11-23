@@ -49,7 +49,7 @@ function Contact() {
     return (
         <>
             <div className="container my-5 px-3 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5 dark">
-                <form className="my-5 ps-5 form">
+                <form className="my-5 px-3 form">
                     <h1 className="fw-bold title text-md-start dark">
                         Contact
                     </h1>
