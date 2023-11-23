@@ -23,9 +23,9 @@ function Projects() {
                 <h1 className="title fw-bold text-center text-md-start ms-md-5 dark">
                     Projects
                 </h1>
-                <div className="container my-5">
+                <div className="my-5">
                     <div className="d-block d-md-flex gap-5 mt-5 mt-md-0">
-                        <div className="p-5 col-12 col-md-6 project-container">
+                        <div className="p-5 col project-container">
                             <h4 className="dark fw-bold p-3 rounded-3 text-center">
                                 {userData.projects.project1.title}
                             </h4>
@@ -47,7 +47,7 @@ function Projects() {
                                 </a>
                             </div>
                         </div>
-                        <div className="p-5 col-12 col-md-6 project-container mt-5 mt-md-0">
+                        <div className="p-5 col project-container mt-5 mt-md-0">
                             <h4 className="dark fw-bold p-3 rounded-3 text-center">
                                 {userData.projects.project2.title}
                             </h4>
@@ -71,7 +71,7 @@ function Projects() {
                         </div>
                     </div>
                     <div className="d-block d-md-flex gap-5 mt-5">
-                        <div className="p-5 col-12 col-md-6 project-container mt-5 mt-md-0">
+                        <div className="p-5 col  project-container mt-5 mt-md-0">
                             <h4 className="dark fw-bold p-3 rounded-3 text-center">
                                 {userData.projects.project3.title}
                             </h4>
@@ -87,7 +87,7 @@ function Projects() {
                                 </a>
                             </div>
                         </div>
-                        <div className="p-5 col-12 col-md-6 project-container mt-5 mt-md-0">
+                        <div className="p-5 col project-container mt-5 mt-md-0">
                             <h4 className="dark fw-bold p-3 rounded-3 text-center">
                                 {userData.projects.project4.title}
                             </h4>
