@@ -109,7 +109,7 @@ function Contact() {
                         </button>
                     </div>
                 </form>
-                <div className="my-5 p-3 align-self-center text-center col-12 col-md-6 text-md-start">
+                <div className="my-5 py-5 p-3 align-self-center text-center col-12 col-md-6 text-md-start">
                     <h6>
                         Feel free to send me an {""}
                         <a
