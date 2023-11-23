@@ -1,7 +1,5 @@
 import React from "react";
 import api1 from "../../assets/api1.png";
-import api2 from "../../assets/api2.png";
-import api3 from "../../assets/api3.png";
 import game1 from "../../assets/game1.png";
 import game2 from "../../assets/game2.png";
 import wikipedia1 from "../../assets/wikipedia1.png";
@@ -16,7 +14,7 @@ function RecentProjects() {
                 <h2 className="title fw-bold text-center text-lg-start dark">
                     Recent Projects
                 </h2>
-                <div className="my-5">
+                <div className="container my-5">
                     <div className="d-block d-md-flex gap-5 mt-5 mt-md-0">
                         <div className="p-5 col-12 col-md-6 project-container">
                             <h4 className="dark fw-bold p-3 rounded-3 text-center">

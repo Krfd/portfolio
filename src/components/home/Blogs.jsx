@@ -25,7 +25,7 @@ function Blogs() {
                     </small>
                     <a
                         href={userData.blogs.blog1.link}
-                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg
@@ -57,7 +57,7 @@ function Blogs() {
                     </small>
                     <a
                         href={userData.blogs.blog2.link}
-                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg
@@ -89,7 +89,7 @@ function Blogs() {
                     </small>
                     <a
                         href={userData.blogs.blog3.link}
-                        className="dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
+                        className="text-dark text-decoration-none fw-bold icon-link icon-link-hover mt-2"
                     >
                         Read Blog{" "}
                         <svg
