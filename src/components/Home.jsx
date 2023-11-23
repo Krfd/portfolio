@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "/avatar.jpg";
+import Avatar from "/avatar-bordered.svg";
 import Blogs from "./home/Blogs";
 import RecentProjects from "./home/RecentProjects";
 
@@ -12,7 +12,7 @@ function Home() {
                         <img
                             src={Avatar}
                             alt="Avatar"
-                            className="rounded-circle object-fit-cover avatar shadow-lg d-block mx-auto"
+                            className="rounded-circle d-block mx-auto object-fit-cover avatar"
                         />
                     </div>
                     <div className="mt-5 mt-md-0 text-center text-md-start">
