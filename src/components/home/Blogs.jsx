@@ -21,7 +21,7 @@ function Blogs() {
                         {userData.blogs.blog1.title}
                     </h6>
                     <small className="text-sm secondary">
-                        Publish on {userData.blogs.blog1.date}
+                        Published in {userData.blogs.blog1.date}
                     </small>
                     <a
                         href={userData.blogs.blog1.link}
@@ -53,7 +53,7 @@ function Blogs() {
                         {userData.blogs.blog2.title}
                     </h6>
                     <small className="text-sm secondary">
-                        Publish on {userData.blogs.blog2.date}
+                        Published in {userData.blogs.blog2.date}
                     </small>
                     <a
                         href={userData.blogs.blog2.link}
@@ -85,7 +85,7 @@ function Blogs() {
                         {userData.blogs.blog3.title}
                     </h6>
                     <small className="text-sm secondary">
-                        Publish on {userData.blogs.blog3.date}
+                        Published in {userData.blogs.blog3.date}
                     </small>
                     <a
                         href={userData.blogs.blog3.link}
