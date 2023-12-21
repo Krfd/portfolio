@@ -9,8 +9,7 @@ const userData = {
     socials: {
         facebook: "https://www.facebook.com/KarlFredriech",
         instagram: "https://www.instagram.com/its_krl.frdrch/",
-        linkedin:
-            "https://www.linkedin.com/in/karl-fredriech-getuya-6b0271218/",
+        linkedin: "https://www.linkedin.com/in/karlfredriech/",
         github: "https://github.com/Krfd",
     },
     stack: {
