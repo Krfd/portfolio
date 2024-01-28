@@ -113,7 +113,6 @@ body {
     box-shadow: none;
     border: 1px solid #292b2c;
     box-shadow: 1px 1px 1px var(--dark);
-    color: var(--dark);
 }
 .social-icon {
     font-size: 25px;

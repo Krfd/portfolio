@@ -2,43 +2,95 @@ import "./modeIcon.css";
 import app from "./firebaseConfig";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import Swal from "sweetalert2/dist/sweetalert2.js";
+import Swal from "sweetalert2";
+// const nodemailer = require("nodemailer");
 
 function Contact() {
     const [contact, setContact] = useState({ name: "", email: "", phone: "" });
+
+    // const transport = nodemailer.createTransport({
+    //     service: "gmail",
+    //     auth: {
+    //         user: "karlfredriechgetuya@gmail.com",
+    //         password: "",
+    //     },
+    // });
+
+    // const mailOptions = {
+    //     from: "karlfredriechgetuya@gmail.com",
+    //     to: contact.email,
+    //     subject: "From Karl Fredriech Getuya",
+    //     text: "Thank you for contacting me! If you have any questions, please feel free to ask me. I will get back to you as soon as possible. Have a great day!",
+    // };
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "center",
+        // iconColor: "white",
+        customClass: {
+            popup: "colored-toast",
+        },
+        // showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+    });
 
     const addContact = (e) => {
         try {
             e.preventDefault();
             const db = getFirestore(app);
 
-            // db
-            //     ? alert("Connected to the database")
-            //     : alert("Not connected to the database");
-
             if (
                 contact.name === "" ||
                 contact.email === "" ||
                 contact.phone === ""
             ) {
-                Swal.fire({
-                    title: "Oops!",
-                    text: "Please fill out all the fields",
+                // Swal.fire({
+                //     title: "Missing Fields!",
+                //     // text: "Please fill out all the fields",
+                //     icon: "error",
+                //     confirmButtonText: "OK",
+                //     confirmButtonColor: "#0E0E10",
+                //     iconColor: "#EB5546",
+                // });
+                Toast.fire({
                     icon: "error",
-                    confirmButtonText: "OK",
+                    iconColor: "#EB5546",
+                    width: "15rem",
+                    title: "Missing Fields",
+                    confirmButtonText: "Try Again",
+                    confirmButtonColor: "#EB5546",
                 });
             } else {
                 addDoc(collection(db, "contact"), contact);
+
+                // transport.sendMail(mailOptions, function (error, info) {
+                //     if (error) {
+                //         console.log(error);
+                //     } else {
+                //         console.log("Mail sent:" + info.response);
+                //     }
+                // });
+
                 setContact({
                     name: "",
                     email: "",
                     phone: "",
                 });
-                Swal.fire({
-                    title: "Success!",
-                    text: "Thank you for contacting us! We will get back to you soon",
+                // Swal.fire({
+                //     title: "Success!",
+                //     text: "Thank you for contacting us! We will get back to you soon",
+                //     icon: "success",
+                //     confirmButtonText: "OK",
+                // });
+                Toast.fire({
                     icon: "success",
-                    confirmButtonText: "OK",
+                    iconColor: "#67CC65",
+                    width: "20rem",
+                    title: "Thank you for contacting us! We will get back to you soon",
+                    // color: "#297EA6",
+                    confirmButtonText: "Okay",
+                    confirmButtonColor: "#67CC65",
                 });
             }
         } catch (err) {
