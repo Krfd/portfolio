@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css";
+import userData from "../data/user";
 
 function Experience() {
     return (
@@ -36,9 +36,44 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <h1 className="title fw-bold text-center text-md-start ms-md-5 dark mb-5">
+                <h1 className="title fw-bold text-center text-md-start ms-md-5 dark">
                     Certificates
                 </h1>
+                <div className="container-fluid py-5 d-md-flex flex-wrap mx-auto gap-4 align-items-center justify-content-center">
+                    {userData.certificates.map((certificate, index) => (
+                        <div
+                            key={index}
+                            className="card shadow-sm p-3 rounded-3 border-0 col-12 col-md-5 col-lg-3 mt-3 mt-md-0"
+                        >
+                            <h6 className="fw-bold text-secondary">
+                                {certificate.title}
+                            </h6>
+                            <span className="text-secondary">
+                                {certificate.issuedBy}
+                            </span>
+                            <a
+                                href={certificate.link}
+                                className="fw-medium text-dark text-decoration-none icon-link icon-link-hover"
+                                target="_blank"
+                            >
+                                View Certificate{" "}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    className="bi bi-arrow-right-short"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

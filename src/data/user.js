@@ -40,6 +40,16 @@ const userData = {
             date: "November 5, 2023",
             link: "https://medium.com/p/e5641d94ad02/edit?source=post_page-----e5641d94ad02--------------------------------",
         },
+        blog4: {
+            title: "Utilizing Git: Integrating Local Repository to Github (Remote Repository) Part 1",
+            date: "January 31, 2024",
+            link: "https://medium.com/dev-genius/utilizing-git-integrating-local-repository-to-github-remote-repository-part-1-f5d311972f9e?source=user_profile---------0----------------------------",
+        },
+        blog5: {
+            title: "Utilizing VSCode: Integrating Local Repository to Github (Remote Repository) Part 2",
+            date: "January 31, 2024",
+            link: "https://medium.com/p/55a2287e71bd/edit?source=your_stories_page-------------------------------------",
+        },
     },
     projects: {
         project1: {
@@ -59,6 +69,58 @@ const userData = {
             link: "",
         },
     },
+    certificates: [
+        {
+            title: "Mastering Tailwind CSS",
+            issuedBy: "BASE 404",
+            link: "https://drive.google.com/file/d/1izgPqF9kPTP3V1f9QzXYOAFd9qhWKfcp/view?usp=drive_link",
+        },
+        {
+            title: "Mastering React Hooks",
+            issuedBy: "BASE 404",
+            link: "https://drive.google.com/file/d/1j2txCAvXtKKfAujfLmRzKpWGxWAg4kBD/view?usp=drive_link",
+        },
+        {
+            title: "Mastering SQL",
+            issuedBy: "BASE 404",
+            link: "https://drive.google.com/file/d/1j1NUv8w6xBd0d3iAQKKePYyFj1RPFUxg/view?usp=drive_link",
+        },
+        {
+            title: "Mastering JavaScript ES6",
+            issuedBy: "BASE 404",
+            link: "https://drive.google.com/file/d/12dqyrwKLI_NfKWPlN8aJcEb0jcUabi-A/view?usp=drive_link",
+        },
+
+        {
+            title: "Introduction to Cybersecurity",
+            issuedBy: "CISCO",
+            link: "https://drive.google.com/file/d/1IhD3FJx0d-z8WteoYa8O-fqRgBu1wKj7/view?usp=drive_link",
+        },
+
+        {
+            title: "Computer Hardware Basics",
+            issuedBy: "CISCO",
+            link: "https://drive.google.com/file/d/1C9MPsn1dN7l7M-aorvQAg66smGfjb7YB/view?usp=drive_link",
+        },
+
+        {
+            title: "Cloud for CEOs",
+            issuedBy: "Amazon Training & Certification",
+            link: "https://drive.google.com/file/d/1Vj7z3teqkW8TjJmQmQKrTdnKxbN_fHGq/view?usp=drive_link",
+        },
+
+        {
+            title: "Advanced Google Analytics",
+            issuedBy: "Google",
+            link: "https://analytics.google.com/analytics/academy/certificate/zbSJ7COJRnO-F6BRdLOcQw",
+        },
+
+        {
+            title: "Google Analytics for Beginners",
+            issuedBy: "Google",
+            link: "https://analytics.google.com/analytics/academy/certificate/b_F7700eRAWfw4vBQdd7qA",
+        },
+    ],
 };
 
 export default userData;
