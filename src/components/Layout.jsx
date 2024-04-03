@@ -55,6 +55,14 @@ function Layout() {
                                     </li>
                                     <li className="nav-item">
                                         <Link
+                                            to="/experience"
+                                            className="nav-link"
+                                        >
+                                            Experience
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link
                                             to="/contact"
                                             className="nav-link"
                                         >

@@ -22,7 +22,7 @@ function Home() {
                             Getuya
                         </h1>
                         <h5 className="dark">
-                            A 23-year-old Aspiring
+                            A 24-year-old Aspiring
                             <span className="fw-bold"> Web Developer</span>
                         </h5>
                     </div>

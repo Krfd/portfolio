@@ -1,12 +1,3 @@
-// import React from "react";
-// import api1 from "../assets/api1.png";
-// import api3 from "../assets/api3.png";
-// import game1 from "../assets/game1.png";
-// import game2 from "../assets/game2.png";
-// import wikipedia1 from "../assets/wikipedia1.png";
-// import wikipedia2 from "../assets/wikipedia2.png";
-// import userData from "./../data/user";
-
 import React from "react";
 import api1 from "./../assets/api1.png";
 import game1 from "./../assets/game1.png";

@@ -3,25 +3,9 @@ import app from "./firebaseConfig";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
-// const nodemailer = require("nodemailer");
 
 function Contact() {
     const [contact, setContact] = useState({ name: "", email: "", phone: "" });
-
-    // const transport = nodemailer.createTransport({
-    //     service: "gmail",
-    //     auth: {
-    //         user: "karlfredriechgetuya@gmail.com",
-    //         password: "",
-    //     },
-    // });
-
-    // const mailOptions = {
-    //     from: "karlfredriechgetuya@gmail.com",
-    //     to: contact.email,
-    //     subject: "From Karl Fredriech Getuya",
-    //     text: "Thank you for contacting me! If you have any questions, please feel free to ask me. I will get back to you as soon as possible. Have a great day!",
-    // };
 
     const Toast = Swal.mixin({
         toast: true,
@@ -45,14 +29,6 @@ function Contact() {
                 contact.email === "" ||
                 contact.phone === ""
             ) {
-                // Swal.fire({
-                //     title: "Missing Fields!",
-                //     // text: "Please fill out all the fields",
-                //     icon: "error",
-                //     confirmButtonText: "OK",
-                //     confirmButtonColor: "#0E0E10",
-                //     iconColor: "#EB5546",
-                // });
                 Toast.fire({
                     icon: "error",
                     iconColor: "#EB5546",
@@ -64,25 +40,11 @@ function Contact() {
             } else {
                 addDoc(collection(db, "contact"), contact);
 
-                // transport.sendMail(mailOptions, function (error, info) {
-                //     if (error) {
-                //         console.log(error);
-                //     } else {
-                //         console.log("Mail sent:" + info.response);
-                //     }
-                // });
-
                 setContact({
                     name: "",
                     email: "",
                     phone: "",
                 });
-                // Swal.fire({
-                //     title: "Success!",
-                //     text: "Thank you for contacting us! We will get back to you soon",
-                //     icon: "success",
-                //     confirmButtonText: "OK",
-                // });
                 Toast.fire({
                     icon: "success",
                     iconColor: "#67CC65",
