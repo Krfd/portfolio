@@ -31,7 +31,7 @@ function Layout() {
                         <h4 className="fw-bold dark">{userData.name}</h4>
                         <p className="secondary fw-light">{userData.title}</p>
                     </Link>
-                    {window.innerWidth > 480 ? (
+                    {window.innerWidth > 430 ? (
                         <nav className="navbar navbar-expand d-flex align-items-end">
                             <div
                                 className="collapse navbar-collapse d-block d-md-flex"
@@ -112,7 +112,7 @@ function Layout() {
                         </div>
                     </div>
                 </div>
-                {window.innerWidth <= 480 ? (
+                {window.innerWidth <= 430 ? (
                     <nav className="navbar navbar-expand d-flex">
                         <div
                             className="collapse navbar-collapse d-block d-md-flex"
