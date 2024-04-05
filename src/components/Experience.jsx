@@ -39,7 +39,7 @@ function Experience() {
                 <h2 className="display-1 fw-bold text-md-start ms-md-5 dark">
                     Certificates
                 </h2>
-                <div className="container-fluid py-5 d-md-flex flex-wrap mx-auto gap-4 align-items-center justify-content-center">
+                <div className="container-fluid py-3 py-md-5 d-md-flex flex-wrap mx-auto gap-4 align-items-center justify-content-center">
                     {userData.certificates.map((certificate, index) => (
                         <div
                             key={index}
