@@ -1,12 +1,20 @@
 import "./modeIcon.css";
 import app from "./firebaseConfig";
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-    const [contact, setContact] = useState({ name: "", email: "", phone: "" });
+    const form = useRef();
 
+    const [contact, setContact] = useState({
+        name: "",
+        email: "",
+        phone: "",
+    });
+
+    // Toast
     const Toast = Swal.mixin({
         toast: true,
         position: "center",
@@ -23,6 +31,21 @@ function Contact() {
         try {
             e.preventDefault();
             const db = getFirestore(app);
+
+            // From emailJs account
+            const serviceId = "service_ttida2p";
+            const templateId = "template_g11rzcb";
+            const publicKey = "v6Vh2u9ibpPZhbwl4";
+
+            // Send email using EmailJs
+            emailjs
+                .sendForm(serviceId, templateId, form.current, publicKey)
+                .then((response) => {
+                    console.log("Email sent successfully", response.status);
+                })
+                .catch((err) => {
+                    console.error("Failed to send email", err);
+                });
 
             if (
                 contact.name === "" ||
@@ -63,11 +86,12 @@ function Contact() {
     return (
         <>
             <div className="container my-5 px-3 shadow-sm d-block d-md-flex gap-5 gap-md-3 gap-lg-5 dark">
-                <form className="my-5 px-3 form col-12 col-md-6">
+                <form ref={form} className="my-5 px-3 form col-12 col-md-6">
                     <h1 className="fw-bold title text-md-start dark">
                         Contact
                     </h1>
                     <div className="mt-5">
+                        <input type="hidden" name="recipient" />
                         <label htmlFor="name">Name</label>
                         <input
                             type="text"
@@ -81,6 +105,7 @@ function Contact() {
                             value={contact.name}
                             id="name"
                             minLength={6}
+                            name="name"
                         />
                         <label htmlFor="email" className="mt-2">
                             Email
@@ -97,9 +122,10 @@ function Contact() {
                             id="email"
                             value={contact.email}
                             minLength={10}
+                            name="email"
                         />
                         <label htmlFor="phone" className="mt-2">
-                            Phone Number
+                            Phone
                         </label>
                         <input
                             type="tel"
@@ -114,6 +140,7 @@ function Contact() {
                             value={contact.phone}
                             minLength={11}
                             maxLength={13}
+                            name="phone"
                         />
                         <button
                             className="text-center w-100 btn btn-dark mt-2"
