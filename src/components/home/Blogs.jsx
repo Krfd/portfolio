@@ -7,9 +7,18 @@ import BlogImg3 from "/images/blog3.jpg";
 function Blogs() {
     return (
         <>
-            <h2 className="fw-bold title text-center text-lg-start dark">
-                Blog Posts
-            </h2>
+            <div className="d-md-flex flex-column flex-md-row justify-content-between">
+                <h2 className="fw-bold title text-center text-lg-start dark">
+                    Blog Posts
+                </h2>
+                <a
+                    href={userData.blogs.all}
+                    target="_blank"
+                    className="btn btn-dark shadow text-light rounded-3 py-3 px-md-5 py-md-3 fw-bold align-self-center mt-3 mt-md-0 text-center d-block mx-auto mx-md-0"
+                >
+                    View All
+                </a>
+            </div>
             <div className="container d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap gap-5 gap-lg-3 mx-auto justify-content-center align-items-center">
                 <div className="card shadow col-12 col-md-5 col-lg-4 p-3 border-0 rounded-0">
                     <img

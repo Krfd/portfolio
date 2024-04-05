@@ -50,6 +50,7 @@ const userData = {
             date: "January 31, 2024",
             link: "https://medium.com/p/55a2287e71bd/edit?source=your_stories_page-------------------------------------",
         },
+        all: "https://medium.com/@karlfredriechgetuya",
     },
     projects: {
         project1: {

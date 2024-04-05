@@ -36,21 +36,21 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <h1 className="title fw-bold text-center text-md-start ms-md-5 dark">
+                <h2 className="display-1 fw-bold text-md-start ms-md-5 dark">
                     Certificates
-                </h1>
+                </h2>
                 <div className="container-fluid py-5 d-md-flex flex-wrap mx-auto gap-4 align-items-center justify-content-center">
                     {userData.certificates.map((certificate, index) => (
                         <div
                             key={index}
                             className="card shadow-sm p-3 rounded-3 border-0 col-12 col-md-5 col-lg-3 mt-3 mt-md-0"
                         >
-                            <h6 className="fw-bold text-secondary">
+                            <small className="fw-bold text-secondary">
                                 {certificate.title}
-                            </h6>
-                            <span className="text-secondary">
+                            </small>
+                            <small className="text-secondary">
                                 {certificate.issuedBy}
-                            </span>
+                            </small>
                             <a
                                 href={certificate.link}
                                 className="fw-medium text-dark text-decoration-none icon-link icon-link-hover"

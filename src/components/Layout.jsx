@@ -26,15 +26,13 @@ function Layout() {
     return (
         <>
             <main className="container mt-3 mt-md-5 pt-3 pt-md-5">
-                <div className="container-fluid d-block d-md-flex justify-content-md-between align-items-center">
-                    <div className="container d-flex justify-content-between align-items-end align-items-md-center">
-                        <Link className="navbar-brand fw-bold" to="/">
-                            <h4 className="fw-bold dark">{userData.name}</h4>
-                            <p className="secondary fw-light">
-                                {userData.title}
-                            </p>
-                        </Link>
-                        <nav className="navbar navbar-expand d-flex align-items-center">
+                <div className="container d-flex justify-content-between align-items-end">
+                    <Link className="navbar-brand fw-bold" to="/">
+                        <h4 className="fw-bold dark">{userData.name}</h4>
+                        <p className="secondary fw-light">{userData.title}</p>
+                    </Link>
+                    {window.innerWidth > 390 ? (
+                        <nav className="navbar navbar-expand d-flex align-items-end">
                             <div
                                 className="collapse navbar-collapse d-block d-md-flex"
                                 id="navbarNav"
@@ -73,8 +71,8 @@ function Layout() {
                                 </ul>
                             </div>
                         </nav>
-                    </div>
-                    <div className="ms-2 d-flex gap-3 justify-content-start justify-content-md-end align-items-center">
+                    ) : null}
+                    <div className="d-flex gap-3 mb-2">
                         <a
                             href={userData.socials.facebook}
                             className="secondary social-icon"
@@ -107,7 +105,6 @@ function Layout() {
                                 onChange={toggleTheme}
                                 defaultChecked={theme === "dark" ? true : false}
                             />
-
                             <label
                                 htmlFor="darkmode-toggle"
                                 className="dark_mode_label"
@@ -115,7 +112,38 @@ function Layout() {
                         </div>
                     </div>
                 </div>
-
+                {window.innerWidth <= 390 ? (
+                    <nav className="navbar navbar-expand d-flex">
+                        <div
+                            className="collapse navbar-collapse d-block d-md-flex"
+                            id="navbarNav"
+                        >
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <Link to="/about" className="nav-link">
+                                        About
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/projects" className="nav-link">
+                                        Projects
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/experience" className="nav-link">
+                                        Experience
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/contact" className="nav-link">
+                                        Contact
+                                    </Link>
+                                </li>
+                                <Link to="/db" />
+                            </ul>
+                        </div>
+                    </nav>
+                ) : null}
                 <div className="container">
                     <Outlet />
                 </div>
