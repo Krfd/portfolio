@@ -1,19 +1,20 @@
 import React from "react";
 import userData from "./../data/user";
+
 import html from "./../icons/html.png";
 import css from "./../icons/css-3.png";
 import bootstrap from "./../icons/bootstrap.png";
 import tailwind from "./../icons/tailwindcss3.png";
-import js from "./../icons/js.png";
+import js from "./../icons/jquery.png";
+import jquery from "./../icons/js.png";
 import react from "./../icons/react2.png";
 import php from "./../icons/php.png";
 import sql from "./../icons/sql.png";
-import vscode from "./../icons/vscode.png";
 import git from "./../icons/git.png";
-import github from "./../icons/github.png";
 import firebase from "./../icons/firebase.png";
-import xampp from "./../icons/xampp.png";
 import postman from "./../icons/postman.png";
+import figma from "./../icons/figma.png";
+import laravel from "./../icons/lrvl.png";
 
 function About() {
     return (
@@ -207,6 +208,13 @@ function About() {
                             </div>
                             <div className="shadow-sm p-3 rounded-3 box">
                                 <img
+                                    src={jquery}
+                                    alt="Javascript"
+                                    className="technology"
+                                />
+                            </div>
+                            <div className="shadow-sm p-3 rounded-3 box">
+                                <img
                                     src={react}
                                     alt="React"
                                     className="technology"
@@ -228,13 +236,6 @@ function About() {
                             </div>
                             <div className="shadow-sm p-3 rounded-3 box">
                                 <img
-                                    src={vscode}
-                                    alt="VS Code"
-                                    className="technology"
-                                />
-                            </div>
-                            <div className="shadow-sm p-3 rounded-3 box">
-                                <img
                                     src={git}
                                     alt="Git"
                                     className="technology"
@@ -249,6 +250,13 @@ function About() {
                             </div>
                             <div className="shadow-sm p-3 rounded-3 box">
                                 <img
+                                    src={laravel}
+                                    alt="Laravel"
+                                    className="technology"
+                                />
+                            </div>
+                            <div className="shadow-sm p-3 rounded-3 box">
+                                <img
                                     src={postman}
                                     alt="Postman"
                                     className="technology"
@@ -256,15 +264,8 @@ function About() {
                             </div>
                             <div className="shadow-sm p-3 rounded-3 box">
                                 <img
-                                    src={xampp}
-                                    alt="XAMPP"
-                                    className="technology"
-                                />
-                            </div>
-                            <div className="shadow-sm p-3 rounded-3 box">
-                                <img
-                                    src={github}
-                                    alt="Github"
+                                    src={figma}
+                                    alt="Figma"
                                     className="technology"
                                 />
                             </div>
