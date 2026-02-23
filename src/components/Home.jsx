@@ -22,8 +22,8 @@ function Home() {
                             Getuya
                         </h1>
                         <h5 className="dark">
-                            A 24-year-old Aspiring
-                            <span className="fw-bold"> Web Developer</span>
+                            A 26-year-old
+                            <span className="fw-bold">Software Developer</span>
                         </h5>
                     </div>
                 </div>
