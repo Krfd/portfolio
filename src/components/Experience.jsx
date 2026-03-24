@@ -17,7 +17,7 @@ function Experience() {
               <p>Developing exclusive Web-Based applications.</p>
             </div>
           </div>
-          <div className="container">
+          <div className="container mt-3 mt-md-0">
             <h2 className="fw-bold text-secondary">2024</h2>
             <div className="rounded-3 shadow-sm p-3 bg-light">
               <h3 className="sub-title fw-bold">Graduation</h3>
