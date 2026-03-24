@@ -5,7 +5,7 @@ const userData = {
   profile: "/public/avatar.jpg",
   email: "karlfredriechgetuya@gmail.com",
   address: "Iloilo, Iloilo City Philippines",
-  title: "Web Developer",
+  title: "Software Developer",
   socials: {
     facebook: "https://www.facebook.com/KarlFredriech",
     instagram: "https://www.instagram.com/its_krl.frdrch/",
